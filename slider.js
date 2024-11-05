@@ -5,7 +5,7 @@ var current = 0;
 const interval = 3000;
 
 
-function changSlider(n){
+function changeSlider(n){
     for(var i =0;i<imgs.length;i++){
         imgs[i].style.opacity = 0;
         dots[i].className = dots[i].className.replace('active','');
@@ -17,6 +17,6 @@ function changSlider(n){
 }
 
 let timer = setInterval(()=>{
-    changSlider(current);
+    changeSlider(current);
     current = (current+1)% imgs.length;
 },interval)
